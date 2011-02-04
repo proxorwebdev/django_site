@@ -20,3 +20,10 @@ def vote(request, poll_id):
         selected_choice.votes +=1
         selected_choice.save()
         return HttpResponseRedirect(reverse('poll_results', args=(p.id, )))
+
+def index(request):
+
+    if 'plain' in request.GET and request.GET['plain'] == '1':
+        return HttpResponse('Hello Wolrd!1')
+    else:
+        return render_to_response('index.html')
