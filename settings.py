@@ -92,6 +92,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'polls',
+    'guestbook',
     'django.contrib.admin'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
