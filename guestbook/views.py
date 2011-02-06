@@ -34,4 +34,8 @@ def index(request):
             tpl_vars['success_save'] = 1
         else:
             tpl_vars['errors'] = errors
+            tpl_vars['username'] = request.POST['username']
+            tpl_vars['text'] = request.POST['text']
+            tpl_vars['email'] = request.POST['email']
+
     return render_to_response('guestbook/index.html', tpl_vars)

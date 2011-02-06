@@ -15,9 +15,9 @@
     <div style="color:blue">Success save!!!</div>
 {% endif %}
 <form action="" method="POST">
-    Username: <input type="text" name="username" value=""><br>
-    Email: <input type="text" name="email" value=""><br>
-    Text: <textarea rows="5" cols="50" name="text"></textarea><br>
+    Username: <input type="text" name="username" value="{{ username }}"><br>
+    Email: <input type="text" name="email" value="{{ email }}"><br>
+    Text: <textarea rows="5" cols="50" name="text">{{ text }}</textarea><br>
     <input type="submit" value="Go">
 </form>
 
