@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Guestbook{% endblock %}
+
+{% block content %}
+
 <h1>Guestbook records</h1>
 {% if errors %}
     <ul>
@@ -27,3 +32,5 @@
 {% else %}
     No messages!!!
 {% endif %}
+
+{% endblock %}
