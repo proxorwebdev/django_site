@@ -1,6 +1,6 @@
-from django import forms
+from django.forms import ModelForm
+from guestbook.models import Message
 
-class GuestbookForm(forms.Form):
-    username = forms.CharField()
-    email = forms.EmailField()
-    text = forms.CharField(widget=forms.Textarea)
+class GuestbookForm(ModelForm):
+    class Meta:
+        model = Message

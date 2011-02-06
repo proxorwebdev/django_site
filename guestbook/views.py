@@ -11,11 +11,7 @@ def index(request):
     if request.method == 'POST':
         form = GuestbookForm(request.POST)
         if form.is_valid():
-            mess = Message()
-            mess.username = request.POST['username']
-            mess.text = request.POST['text']
-            mess.email = request.POST['email']
-            mess.save()
+            form.save()
             tpl_vars['success_save'] = 1
             form = GuestbookForm()
     else:
