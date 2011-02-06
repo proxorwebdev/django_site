@@ -6,12 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def index(request):
     tpl_vars = {}
-    #print request.POST
-    #print request.method
     if request.method == 'POST':
-        #mess = Message(**request.POST)
         errors = []
-
 
         if not request.POST['username']:
             errors.append("Username is required")
@@ -37,5 +33,4 @@ def index(request):
             tpl_vars['success_save'] = 1
         else:
             tpl_vars['errors'] = errors
-        #pass
     return render_to_response('guestbook/index.html', tpl_vars)
