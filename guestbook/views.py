@@ -6,6 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def index(request):
     tpl_vars = {}
+    tpl_vars['messages'] = Message.objects.all()
     if request.method == 'POST':
         errors = []
 
