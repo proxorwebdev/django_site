@@ -1,4 +1,3 @@
-import pprint
 from guestbook.forms import GuestbookForm
 from guestbook.models import Message
 
