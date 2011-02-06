@@ -1,12 +1,13 @@
+import pprint
 from guestbook.models import Message
 
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def index(request):
-    tpl_vars = {}
-    tpl_vars['messages'] = Message.objects.all()
+    tpl_vars = {'messages': Message.objects.all()}
+    pprint.pprint(tpl_vars['messages'])
     if request.method == 'POST':
         errors = []
 
